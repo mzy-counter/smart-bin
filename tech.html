@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术参数 | 恒新绿源</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f172a] text-slate-200">
+    <nav class="p-8 max-w-7xl mx-auto flex justify-between items-center border-b border-white/5">
+        <a href="index.html" class="text-emerald-500 font-bold tracking-widest text-sm">← <span data-cn="返回首页" data-en="BACK HOME">返回首页</span></a>
+        <span class="text-xs uppercase tracking-[0.5em] text-slate-500">Technical Specifications</span>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="mb-32">
+            <h2 class="text-4xl font-black mb-12 text-center" data-cn="实机演示" data-en="Demo Video">实机演示</h2>
+            <div class="relative max-w-4xl mx-auto rounded-[3rem] overflow-hidden border-8 border-slate-800 shadow-2xl">
+                <video controls class="w-full h-full block">
+                    <source src="sp.mp4" type="video/mp4">
+                    您的浏览器不支持视频。
+                </video>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-20">
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-emerald-400 mb-6">01 / 控制核心 (Control Core)</h3>
+                    <p class="text-slate-400 leading-relaxed mb-4" data-cn="采用 Xilinx Artix-7 系列 FPGA，内置自定义硬件加速单元，实现高速图像预处理。" data-en="Utilizing Xilinx Artix-7 FPGA with custom acceleration units for image preprocessing.">采用 Xilinx Artix-7 系列 FPGA，内置自定义硬件加速单元，实现高速图像预处理。</p>
+                    <ul class="space-y-2 text-sm text-slate-300 italic">
+                        <li>• Clock Frequency: 100MHz</li>
+                        <li>• Logic Cells: 33,280</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6">02 / 通讯链路 (Communication)</h3>
+                    <p class="text-slate-400 leading-relaxed mb-4" data-cn="Fibocom L610 全网通模组，支持 MQTT 协议与云端进行异步通信，数据传输延迟低于 100ms。" data-en="Fibocom L610 module supporting MQTT for cloud communication with <100ms latency.">Fibocom L610 全网通模组，支持 MQTT 协议与云端进行异步通信，数据传输延迟低于 100ms。</p>
+                </div>
+            </div>
+            <div class="bg-slate-800/30 p-12 rounded-[3rem] border border-white/5">
+                <h3 class="text-2xl font-bold mb-8" data-cn="系统原理图" data-en="System Diagram">系统原理图</h3>
+                <img src="aaaa.png" class="w-full rounded-2xl grayscale hover:grayscale-0 transition duration-500 mb-8">
+                <p class="text-xs text-slate-500 leading-relaxed" data-cn="图示：三扇区旋转分类结构与多路传感器协同逻辑。该结构可确保单入口设计下的高效率投放。" data-en="Diagram: Three-sector rotation structure and multi-sensor logic. This ensures high efficiency in a single-entry design.">图示：三扇区旋转分类结构与多路传感器协同逻辑。该结构可确保单入口设计下的高效率投放。</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
