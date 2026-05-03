@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恒新绿源 | 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .text-gradient { background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200">
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-leaf text-emerald-500 text-2xl"></i>
+                <span class="text-xl font-black italic">恒新绿源</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-emerald-400" data-cn="首页" data-en="Home">首页</a>
+                <a href="tech.html" class="hover:text-emerald-400 transition" data-cn="技术架构" data-en="Tech">技术架构</a>
+                <a href="about.html" class="hover:text-emerald-400 transition" data-cn="关于我们" data-en="About">关于我们</a>
+                <button onclick="toggleLang()" class="bg-emerald-500/10 border border-emerald-500/50 px-3 py-1 rounded-full text-xs transition">CN/EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-6xl font-black mb-6 leading-tight" data-cn="智理未来 分类存储" data-en="Smart Future, Sorted Storage">智理未来 分类存储</h1>
+            <p class="text-xl text-slate-400 mb-8" data-cn="基于 FPGA 并行加速的新一代 AIoT 智能垃圾处理方案。" data-en="Next-gen AIoT waste solution based on FPGA acceleration.">基于 FPGA 并行加速的新一代 AIoT 智能垃圾处理方案。</p>
+            <div class="flex space-x-4">
+                <div class="p-4 bg-slate-800/50 rounded-2xl border border-white/5 text-center flex-1">
+                    <span class="text-emerald-400 font-bold block">360°</span>
+                    <span class="text-[10px] uppercase text-gray-500" data-cn="物理回转" data-en="Rotation">物理回转</span>
+                </div>
+                <div class="p-4 bg-slate-800/50 rounded-2xl border border-white/5 text-center flex-1">
+                    <span class="text-blue-400 font-bold block">99%</span>
+                    <span class="text-[10px] uppercase text-gray-500" data-cn="识别精度" data-en="Accuracy">识别精度</span>
+                </div>
+            </div>
+        </div>
+        <div class="relative group">
+            <img src="2.jpg" alt="Main Design" class="w-full relative z-10 hover:scale-105 transition duration-700 drop-shadow-[0_0_30px_rgba(16,185,129,0.2)]">
+        </div>
+    </section>
+
+    <script>
+        function toggleLang() {
+            const lang = document.documentElement.lang === 'zh-CN' ? 'en' : 'zh-CN';
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-cn]').forEach(el => {
+                el.innerText = el.getAttribute('data-' + (lang === 'zh-CN' ? 'cn' : 'en'));
+            });
+        }
+    </script>
+</body>
+</html>
